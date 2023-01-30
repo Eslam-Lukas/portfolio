@@ -1,8 +1,3 @@
-const accessToken =
-		'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0',
-	headers = {
-		Authorization: `Token ${accessToken}`,
-	};
 let api = `https://api.github.com/users/Eslam-Lukas/repos`;
 let projects = document.getElementById('projects');
 let proCont = document.getElementById('projects-container');
@@ -53,7 +48,7 @@ async function projectForm(ele) {
 	deployLink.setAttribute('href', deploy);
 	img.setAttribute(
 		'src',
-		'../css/sass/media/favpng_computer-programming-programming-language-clip-art.png',
+		'./css/sass/media/favpng_computer-programming-programming-language-clip-art.png',
 	);
 	await dataVal();
 	//append text
