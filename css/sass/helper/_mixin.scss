@@ -1,0 +1,31 @@
+@use './vars' as *;
+
+@mixin flex($justify: center, $align: center, $flow: row wrap, $gap: 0px) {
+	display: flex;
+	justify-content: $justify;
+	align-items: $align;
+	flex-flow: $flow;
+	gap: $gap;
+}
+@mixin animi($name) {
+	@-webkit-keyframes #{$name} {
+		@content;
+	}
+	@-moz-keyframes #{$name} {
+		@content;
+	}
+	@keyframes #{$name} {
+		@content;
+	}
+}
+@mixin animiDetails(
+	$name,
+	$dur: 5s,
+	$timeFu: linear,
+	$del: 0s,
+	$itr: infinite,
+	$dir: alternate,
+	$fill: both
+) {
+	animation: $name $dur $timeFu $del $itr $dir $fill;
+}

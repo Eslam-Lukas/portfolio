@@ -1,0 +1,22 @@
+@use '../helper/vars' as *;
+@use '../helper/animation' as *;
+@use '../helper/mixin' as *;
+@use './global' as *;
+.resume {
+	.container {
+		.text {
+		}
+		.btn {
+			margin-left: calc(100% - 80px);
+			margin-top: 30px;
+			a {
+				width: 100%;
+				height: 100%;
+				text-decoration: none;
+				display: block;
+				color: inherit;
+				line-height: 40px;
+			}
+		}
+	}
+}
