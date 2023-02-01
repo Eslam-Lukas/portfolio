@@ -1,0 +1,50 @@
+@use './vars' as *;
+
+@mixin flex($justify: center, $align: center, $flow: row wrap, $gap: 0px) {
+	display: flex;
+	justify-content: $justify;
+	align-items: $align;
+	flex-flow: $flow;
+	gap: $gap;
+}
+@mixin animi($name) {
+	@-webkit-keyframes #{$name} {
+		@content;
+	}
+	@-moz-keyframes #{$name} {
+		@content;
+	}
+	@keyframes #{$name} {
+		@content;
+	}
+}
+@mixin animiDetails(
+	$name,
+	$dur: 5s,
+	$timeFu: linear,
+	$del: 0s,
+	$itr: infinite,
+	$dir: alternate,
+	$fill: both
+) {
+	animation: $name $dur $timeFu $del $itr $dir $fill;
+}
+@mixin media($screen) {
+	@if $screen == mop {
+		@media (max-width: 767px) {
+			@content;
+		}
+	} @else if $screen == med {
+		@media (min-width: 768px) and (max-width: 991px) {
+			@content;
+		}
+	} @else if $screen == large {
+		@media (min-width: 992px) and (max-width: 1199px) {
+			@content;
+		}
+	} @else {
+		@media (min-width: 1200px) {
+			@content;
+		}
+	}
+}

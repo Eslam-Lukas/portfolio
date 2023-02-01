@@ -1,0 +1,26 @@
+@use '../helper/vars' as *;
+@use '../helper/animation' as *;
+@use '../helper/mixin' as *;
+@use './global' as *;
+footer {
+	.container {
+		@include flex(space-evenly, center);
+		padding: 20px;
+		.design {
+			font-size: 30px;
+			@include media(mop) {
+				font-size: 20px;
+			}
+			.lukas {
+				font-weight: bold;
+				color: $L-M-T;
+				text-decoration: underline;
+			}
+			.copy {
+				.year {
+					font-weight: bold;
+				}
+			}
+		}
+	}
+}

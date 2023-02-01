@@ -1,0 +1,73 @@
+@use '../helper/vars' as *;
+@use '../helper/animation' as *;
+@use '../helper/mixin' as *;
+@use './global' as *;
+.skills {
+	text-align: center;
+	background-image: url('/css/sass/media/pngwing.com\ \(26\).png');
+	min-height: 100vh;
+	background-size: 100% 100%;
+	font-weight: bold;
+	letter-spacing: 3px;
+	text-transform: capitalize;
+
+	.container {
+		@include flex();
+		gap: 30px;
+		.card {
+			flex-basis: 20%;
+			box-shadow: 5px 5px 4px 2px inset $L-overlay;
+			height: 160px;
+			@extend %flex-row, %cards;
+			gap: 0;
+			overflow: hidden;
+			@include media(mop) {
+				flex-basis: 80%;
+			}
+			@include media(med) {
+				flex-basis: 30%;
+			}
+			&:hover {
+				.img-holder {
+					margin-top: -50%;
+				}
+			}
+			.img-holder {
+				width: 80%;
+				height: 110px;
+				position: relative;
+				transition: 2s;
+				img {
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					transition: $M-transtion;
+					width: 80px;
+				} //img
+			} //img-holder
+			.lang {
+				width: 80%;
+				font-size: 20px;
+			} //lang
+			.prog {
+				width: 80%;
+				height: 25px;
+				background-color: $L-overlay;
+				border-radius: 10px;
+				position: relative;
+				overflow: hidden;
+				.width {
+					display: block;
+					height: 100%;
+					width: 0;
+					border-right: 1px solid royalblue;
+					transition: $M-transtion;
+					position: absolute;
+					top: 0;
+					left: 0;
+				} //width
+			} //prog
+		}
+	}
+}
