@@ -27,11 +27,14 @@
 			rel="stylesheet"
 			href="./css/main.css" />
 		<title>Lukas portfolio</title>
+		<meta
+			name="description"
+			content=" I'm Eslam Seif A Front-End Developer Skilled In HTML, CSS, JavaScript, And React. I Also Have Experience Using Sass And Am Familiar With Bootstrap And Vue. I Have A Working Knowledge Of Npm And Have Created Several Projects" />
 	</head>
 	<body>
 		<section
 			id="landing"
-			class="landing">
+			class="landing active">
 			<nav
 				id="pages"
 				class="pages">
@@ -40,22 +43,22 @@
 					<span class="light active">light</span>
 				</div>
 				<ul class="links">
-					<li class="active">
-						<i class="fa-solid fa-house fa-2xl"><a href="#landing"></a></i>
+					<li
+						class="active"
+						data-sect="landing">
+						<i class="fa-solid fa-house fa-2xl"></i>
 					</li>
-					<li>
-						<i class="fa-solid fa-user fa-2xl"><a href="#skills"></a></i>
+					<li data-sect="skills">
+						<i class="fa-solid fa-user fa-2xl"></i>
 					</li>
-
-					<li>
-						<i class="fa-solid fa-laptop-code fa-2xl"></i
-						><a href="#projects"></a>
+					<li data-sect="projects">
+						<i class="fa-solid fa-laptop-code fa-2xl"> </i>
 					</li>
-					<li>
-						<i class="fa-solid fa-briefcase fa-2xl"><a href="#resume"></a></i>
+					<li data-sect="resume">
+						<i class="fa-solid fa-briefcase fa-2xl"></i>
 					</li>
-					<li>
-						<i class="fa-solid fa-phone fa-2xl"><a href="#"></a></i>
+					<li data-sect="contact">
+						<i class="fa-solid fa-phone fa-2xl"></i>
 					</li>
 				</ul>
 				<span
@@ -115,8 +118,8 @@
 					></span>
 					<span
 						><i
-							id="whatsapp"
-							class="whatsapp fa-brands fa-whatsapp fa-2xl"></i
+							id="windows"
+							class="windows fa-brands fa-windows fa-2xl"></i
 					></span>
 				</div>
 			</nav>
@@ -135,7 +138,7 @@
 					<p class="lang">java script</p>
 					<span
 						class="prog"
-						data-width="95%"
+						data-width="80%"
 						><span class="width"></span
 					></span>
 				</div>
@@ -148,7 +151,7 @@
 					<p class="lang">react</p>
 					<span
 						class="prog"
-						data-width="95%"
+						data-width="75%"
 						><span class="width"></span
 					></span>
 				</div>
@@ -161,7 +164,7 @@
 					<p class="lang">redux</p>
 					<span
 						class="prog"
-						data-width="95%"
+						data-width="75%"
 						><span class="width"></span
 					></span>
 				</div>
@@ -200,7 +203,7 @@
 					<p class="lang">sass</p>
 					<span
 						class="prog"
-						data-width="95%"
+						data-width="90%"
 						><span class="width"></span
 					></span>
 				</div>
@@ -213,7 +216,7 @@
 					<p class="lang">bootstrap</p>
 					<span
 						class="prog"
-						data-width="95%"
+						data-width="65%"
 						><span class="width"></span
 					></span>
 				</div>
@@ -226,7 +229,7 @@
 					<p class="lang">pug js</p>
 					<span
 						class="prog"
-						data-width="95%"
+						data-width="70%"
 						><span class="width"></span
 					></span>
 				</div>
@@ -239,7 +242,7 @@
 					<p class="lang">vue</p>
 					<span
 						class="prog"
-						data-width="95%"
+						data-width="50%"
 						><span class="width"></span
 					></span>
 				</div>
@@ -252,7 +255,7 @@
 					<p class="lang">node js</p>
 					<span
 						class="prog"
-						data-width="95%"
+						data-width="50%"
 						><span class="width"></span
 					></span>
 				</div>
@@ -290,9 +293,9 @@
 				</div>
 				<button class="btn btn-resume">
 					<a
-						href="https://drive.google.com/file/d/1221FgBlxyNjydlhYf9uvCIQ_7VDOKwFd/view?usp=share_link
-					"
-						>resume</a
+						target="_blank"
+						href="https://drive.google.com/file/d/1221FgBlxyNjydlhYf9uvCIQ_7VDOKwFd/view?usp=share_link">
+						resume</a
 					>
 				</button>
 			</div>
@@ -304,11 +307,14 @@
 			<div class="container">
 				<form
 					action=""
+					method="post"
+					enctype=""
 					id="form"
 					class="form">
 					<label for="email">email</label>
 					<span class="inp">
 						<input
+							class="inp-form"
 							id="email"
 							type="email"
 							maxlength="30"
@@ -322,24 +328,26 @@
 					>
 					<span class="inp">
 						<input
+							class="inp-form"
 							id="phone"
-							type="number"
+							type="text"
 							maxlength="15" />
 						<span class="after"></span>
 					</span>
 					<label for="message">message</label>
 					<span class="inp textarea">
 						<textarea
+							class="inp-form"
 							id="message"
 							maxlength="300"
 							placeholder="message"></textarea>
 						<span class="after"></span>
 					</span>
-					<input
+					<button
 						id="clear"
-						class="sub clear"
-						type="submit"
-						value="clear" />
+						class="sub clear">
+						clear
+					</button>
 					<input
 						id="sub"
 						class="sub"
@@ -348,24 +356,17 @@
 				</form>
 			</div>
 		</section>
+		<footer>
+			<div class="container">
+				<p class="design">designd by <span class="lukas">lukas</span></p>
+				<p class="copy">
+					all right reserved &copy;
+					<span
+						id="year"
+						class="year"></span>
+				</p>
+			</div>
+		</footer>
 		<script src="./js/index.js"></script>
 	</body>
 </html>
-<!-- 
-
-Key Qualifications & Responsibilities
-Implemented websites, mobile applications, and landing pages from concept through deployment.
-Standardized all output with a new, responsive, mobile-first approach and strategy.
-Assessed UX and UI designs for technical feasibility.
-Developed standard and ad hoc reports in graph format as required.
-Collaborated with product team members to implement new feature development
-
-Front End Developer
-February 2017–June 2019
-Murray Hill Media Group, New York, NY
-
-
-
-
-
- -->
