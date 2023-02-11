@@ -264,8 +264,8 @@ body {
 }
 .landing .container .img-holder img {
   max-width: 100%;
-  -webkit-clip-path: circle(130px at 163px 131px);
-          clip-path: circle(130px at 163px 131px);
+  -webkit-clip-path: circle();
+          clip-path: circle();
 }
 @media (max-width: 767px) {
   .landing .container .img-holder img {
