@@ -133,7 +133,7 @@
 			}
 			img {
 				max-width: 100%;
-				clip-path: circle(130px at 163px 131px);
+				clip-path: circle();
 				@include media(mop) {
 					clip-path: none;
 					width: 100%;
