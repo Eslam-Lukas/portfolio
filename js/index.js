@@ -6,13 +6,14 @@ let res = [],
 	allVal = [];
 
 async function text(opj) {
-	let keys = await langfun(opj);
-	let name = opj.name,
-		desc = opj.description,
-		file = opj.html_url,
-		deploy = `https://eslam-lukas.github.io/${opj.name}/`;
-
-	return (res = [name, desc, file, deploy, keys]);
+	if (opj.name !== 'portfolio') {
+		let keys = await langfun(opj);
+		let name = opj.name,
+			desc = opj.description,
+			file = opj.html_url,
+			deploy = `https://eslam-lukas.github.io/${opj.name}/`;
+		return (res = [name, desc, file, deploy, keys]);
+	}
 }
 async function projectForm(ele) {
 	let card = document.createElement('div'),
@@ -26,7 +27,7 @@ async function projectForm(ele) {
 		filesLink = document.createElement('a'),
 		deployLink = document.createElement('a');
 	let [pName, pDesc, file, deploy, keys] = await text(ele);
-	let langs = await keys.forEach((e, i) => {
+	await keys.forEach((e, i) => {
 		let span = document.createElement('span'),
 			text = document.createTextNode(e);
 		span.classList.add(`lang`, `lang-${i + 1}`);
