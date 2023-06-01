@@ -6,7 +6,7 @@ let res = [],
 	allVal = [];
 
 async function text(opj) {
-	if (opj.name !== 'portfolio') {
+	if (opj.name !== 'portfolio' || opj.name !== 'bike-plus' ) {
 		let keys = await langfun(opj);
 		let name = opj.name,
 			desc = opj.description,
